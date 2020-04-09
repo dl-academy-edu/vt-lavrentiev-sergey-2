@@ -1,0 +1,164 @@
+footer {
+  background: #434343;
+  color: #FFFFFF;
+  padding: 90px 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 380px;
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer-section__connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+.footer-section::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 380px;
+  background-color: #666666;
+  top: 50px;
+  left: 0;
+}
+
+.footer-section__connect::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 380px;
+  background-color: #666666;
+  top: 50px;
+  left: 0;
+}
+
+.footer-section::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 380px;
+  background-color: #666666;
+  bottom: 50px;
+  left: 0;
+}
+
+.footer-section__connect::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 380px;
+  background-color: #666666;
+  bottom: 50px;
+  left: 0;
+}
+
+.footer-title {
+  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  
+  color: #AAAAAA;
+  
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.social-list {
+  flex-grow: 1;
+  display: flex;
+  margin-top: 0;
+}
+
+.footer-links {
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: opacity ease-in-out .5s;
+  color: #FFFFFF;
+}
+
+.footer-links:hover {
+  opacity: .5;
+}
+
+.footer-form {
+  display: inline-block;
+  max-width: 380px;
+  margin-bottom: 25px;
+}
+
+.footer-input {
+  display: inline-block;
+  outline: none;
+  background-color: #666666;;
+  border: none;
+  height: 40px;
+  width: 298px;
+  padding: 9px 15px;
+  transition: border ease-in-out .5s;
+}
+
+.footer-input:hover {
+  border: 1px solid #FFFDFD;
+}
+
+.footer-input::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #EBEBEB;
+}
+
+.social-link {
+  margin-right: 15px;
+  transition: opacity ease-in-out .5s;
+}
+
+.social-link:hover {
+  opacity: .5;
+}
+
+.rating {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.company-rating {
+  margin-right: 25px;
+}
+
+.star {
+  margin-right: 3px;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
+.design-company {
+  color: #A2A2A2;
+}
+
+.design-company:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
+}

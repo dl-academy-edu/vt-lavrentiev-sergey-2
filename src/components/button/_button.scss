@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  border: none;
+  color: #FFFFFF;
+  background-color: #1E0606;
+  padding: 9px 22px;
+  cursor: pointer;
+  transition: background-color ease-in-out .6s;
+}
+
+.button:hover {
+  background-color: #C29974;;
+}
+
+.button:active {
+  background-color: #CFAF91;;
+}
+
+.button:disabled {
+  color: #E1E1E1;
+  background-color: #C1C1C1;;
+}
