@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/static/fonts/oswald.css" />
+    <link rel="shortcut icon" href="../../static/images/favicon.ico">
+    <title>Toys for Kids</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="toys">
+        <div class="container">
+          <h1 class="section-title">Toy for kids</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="../../index.html" class="breadcrumbs__link">Home</a></li>
+            <li class="breadcrumbs__item"><a href="../category-products/index.html" class="breadcrumbs__link">Catalog</a></li>
+            <li class="breadcrumb breadcrumbs__item">Toys</li>
+          </ul>
+        </div>
+          <form class="toys-form">
+            <div class="container toys-form__wrapper">
+              <fieldset>
+                <legend class="toys-form__legend">Cost</legend>
+                <label>
+                  <input class="toys-form__range" type="range" name="cost" min="0" max="500" value="100">
+                </label>
+              </fieldset>
+              <fieldset>
+                <legend class="toys-form__legend">Color</legend>
+                <div class="toys-form__color">
+                  @@loop('checkbox/index.html', [
+                    {
+                      "class": "checkbox__colors",
+                      "text": "Black",
+                      "name": "color",
+                      "value": "black",
+                      "checked": "checked"
+                    },
+                    {
+                      "class": "checkbox__colors",
+                      "text": "Blue",
+                      "name": "color",
+                      "value": "blue"
+                    },
+                    {
+                      "class": "checkbox__colors",
+                      "text": "Green",
+                      "name": "color",
+                      "value": "green"
+                    },
+                    {
+                      "class": "checkbox__colors",
+                      "text": "White",
+                      "name": "color",
+                      "value": "white"
+                    }
+                  ])
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="toys-form__legend">Delivery</legend>
+                <label class="toys-form__delivery">
+                  <input class="delivery__input hidden" type="radio" name="delivery" value="free">
+                  <span class="toys-form__radio-btn"></span>
+                  <span class="input__text">Free shipping</span>
+                </label>
+                <label class="toys-form__delivery">
+                  <input class="delivery__input hidden" type="radio" name="delivery" value="fast" checked>
+                  <span class="toys-form__radio-btn"></span>
+                  <span class="input__text">Fast shipping</span>
+                </label>
+              </fieldset>
+              <fieldset>
+                <legend class="toys-form__legend">Amount</legend>
+                <div class="toys-form__amount">
+                  <input class="amount__input hidden" type="radio" id="amount1" name="amount" value="0-5" checked>
+                  <label for="amount1" class="amount__label">0-5</label>
+                  <input class="amount__input hidden" type="radio" id="amount2" name="amount" value="10-20">
+                  <label for="amount2" class="amount__label">10-20</label>
+                  <input class="amount__input hidden" type="radio" id="amount3" name="amount" value="20-50">
+                  <label for="amount3" class="amount__label">20-50</label>
+                </div>
+              </fieldset>
+              @@include('button/index.html', {
+                "text": "Apply",
+                "class": "button filter-button",
+                "type": "type='submit'"
+              })
+            </div>
+          </form>
+      </section>
+      <section class="toy-slider container">
+        <h2 class="hidden">Products display</h2>
+        <div class="toy-slider__wrapper">
+          @@loop('toy_card/index.html', 'toys.json')
+        </div>
+        @@include('pagination/index.html')
+      </section>
+      </main>
+    @@include('footer/index.html')
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "src": "../../static/images/shark-bag.jpg",
+    "alt": "SHARKY BEAN BAG CHAIR COVER",
+    "text": "SHARKY BEAN BAG CHAIR COVER",
+    "price": "$60.00 USD"
+  },
+  {
+    "src": "../../static/images/brass.jpg",
+    "alt": "BRASS DECO FRAMES",
+    "text": "BRASS DECO FRAMES",
+    "price": "$66.00 USD"
+  },
+  {
+    "src": "../../static/images/apron.jpg",
+    "alt": "CIBO FULL APRON",
+    "text": "CIBO FULL APRON",
+    "price": "$60.00 USD"
+  },
+  {
+    "src": "../../static/images/gumball-machine.jpg",
+    "alt": "GATCHA GATCHA GUMBALL MACHINE",
+    "text": "GATCHA GATCHA GUMBALL MACHINE",
+    "price": "$56.00 USD"
+  }, 
+  {
+    "src": "../../static/images/christmas-candle.jpg",
+    "alt": "CHRISTMAS ADVENT SCENTED CANDLE",
+    "text": "CHRISTMAS ADVENT SCENTED CANDLE",
+    "price": "$29.00 USD"
+  }, 
+  {
+    "src": "../../static/images/tangle_spinning_tea_light.jpg",
+    "alt": "TANGLE SPINNING TEA LIGHT",
+    "text": "TANGLE SPINNING TEA LIGHT",
+    "price": "$56.00 USD"
+  }
+]

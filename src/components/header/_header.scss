@@ -1,89 +1,91 @@
+@import './variables';
+
 .header {
   display: flex;
   padding-top: 50px;
   padding-bottom: 40px;
   align-items: center;
-}
 
-.header-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  &__logo {
+    width: 100px;
+    min-width: 100px;
+    min-height: 50px;
+    height: 50px;
+    transition: opacity $transition;
 
-.header-logo {
-  width: 100px;
-  min-width: 100px;
-  min-height: 50px;
-  height: 50px;
-  transition: opacity ease-in-out .5s;
-}
+    &:hover {
+      opacity: .5;
+    }
 
-.header-logo:hover {
-  opacity: .5;
-}
+    &:active {
+      opacity: .2;
+    }
+  }
 
-.header-logo:active {
-  opacity: .2;
-}
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.header-nav__link-list {
-  display: flex;
-  margin-left: 60px;
-  align-items: center;
-}
+  &__link-list {
+    display: flex;
+    margin-left: 60px;
+    align-items: center;
+  }
 
-.header-nav__contacts {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 20px;
+  
+    color: #1E0606;
+    transition: opacity $transition;
 
-.nav-link {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 19px;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-right: 20px;
+    &:hover {
+      opacity: .5;
+    }
 
-  color: #1E0606;
-  transition: opacity ease-in-out .5s;
-}
+    &:active {
+      opacity: .2;
+    }
+  }
 
-.nav-link:hover {
-  opacity: .5;
-}
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.nav-link:active {
-  opacity: .2;
-}
+  &__search {
+    transition: opacity $transition;
 
-.header-nav__search {
-  transition: opacity ease-in-out .5s;
-}
+    &:hover {
+      opacity: .5;
+    }
 
-.header-nav__search:hover {
-  opacity: .5;
-}
+    &:active {
+      opacity: .2;
+    }
+  }
 
-.header-nav__search:active {
-  opacity: .2;
-}
+  &__contact-link {
+    text-shadow: 1px 0 0 #1E0606;
+    margin-left: 23.45px;
+    text-transform: uppercase;
+    transition: opacity $transition;
 
-.contact-link {
-  text-shadow: 1px 0 0 #1E0606;
-  margin-left: 23.45px;
-  text-transform: uppercase;
-  transition: opacity ease-in-out .5s;
-}
+    &:hover {
+      opacity: .5;
+    }
 
-.contact-link:hover {
-  opacity: .5;
-}
-
-.contact-link:active {
-  opacity: .2;
+    &:active {
+      opacity: .2;
+    }
+  }
 }

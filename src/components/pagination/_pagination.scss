@@ -1,0 +1,72 @@
+@import "./variables";
+
+.pagination {
+  position: relative;
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__btn_left {
+    height: 20px;
+    width: 20px;
+    border-bottom: 4px solid rgba(30, 6, 6, 0.12);
+    border-left: 4px solid rgba(30, 6, 6, 0.12);
+    transform: rotate(45deg);
+    transition: border-color $transition;
+
+    &:hover {
+      border-color: #C29974;
+    }
+  
+    &::active {
+      border-color: #C29974;
+      opacity: .5;
+    }
+
+  }
+
+  &__numbers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 234px;
+  }
+
+  &__num {
+    font-family: 'Montserrat' sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-transform: uppercase;
+    color: #1E0606;
+    transition: opacity $transition;
+
+    &:hover {
+      color: #1E0606;
+      opacity: 0.5;
+    }
+  }
+
+  &__btn_right {
+    height: 20px;
+    width: 20px;
+    border-bottom: 4px solid rgba(30, 6, 6, 0.12);
+    border-left: 4px solid rgba(30, 6, 6, 0.12);
+    transform: rotate(225deg);
+    transition: border-color $transition;
+
+    &:hover {
+      border-color: #C29974;
+    }
+  
+    &::active {
+      border-color: #C29974;
+      opacity: .5;
+    }
+
+  }
+  
+}

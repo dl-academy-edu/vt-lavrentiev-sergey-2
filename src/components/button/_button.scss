@@ -11,17 +11,17 @@
   padding: 9px 22px;
   cursor: pointer;
   transition: background-color ease-in-out .6s;
-}
 
-.button:hover {
-  background-color: #C29974;;
-}
+  &:hover {
+    background-color: #C29974;
+  }
 
-.button:active {
-  background-color: #CFAF91;;
-}
+  &:active {
+    background-color: #CFAF91;
+  }
 
-.button:disabled {
-  color: #E1E1E1;
-  background-color: #C1C1C1;;
+  &:disabled {
+    color: #E1E1E1;
+    background-color: #C1C1C1;
+  }
 }

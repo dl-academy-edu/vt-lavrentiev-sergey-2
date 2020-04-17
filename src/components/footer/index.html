@@ -1,14 +1,14 @@
 <footer class="footer">
-  <div class="footer-wrapper container">
-    <div class="footer-section">
-      <h2 class="footer-title">Navigation</h2>
-      <ul class="navigation-list">
-        <li><a href="#" class="footer-links">About Us</a></li>
-        <li><a href="#" class="footer-links">Blog</a></li>
-        <li><a href="#" class="footer-links">Design Services</a></li>
-        <li><a href="#" class="footer-links">Featured On</a></li>
-        <li><a href="#" class="footer-links">2018 Holiday Catalog</a></li>
-        <li><a href="#" class="footer-links">Shop By Designer</a></li>
+  <div class="footer__wrapper container">
+    <div class="footer__section">
+      <h2 class="footer__title">Navigation</h2>
+      <ul class="footer__links">
+        <li><a href="#" class="footer__link">About Us</a></li>
+        <li><a href="#" class="footer__link">Blog</a></li>
+        <li><a href="#" class="footer__link">Design Services</a></li>
+        <li><a href="#" class="footer__link">Featured On</a></li>
+        <li><a href="#" class="footer__link">2018 Holiday Catalog</a></li>
+        <li><a href="#" class="footer__link">Shop By Designer</a></li>
       </ul>
       <div class="rating">
         <p class="company-rating">Company Rating</p>
@@ -19,33 +19,30 @@
         <span class="star">&#9733;</span>
       </div>       
     </div>
-    <div class="footer-section">
-      <h2 class="footer-title">Customer Information</h2>
-      <ul class="customer-info-list">
-        <li><a href="#" class="footer-links">Contact Us</a></li>
-        <li><a href="#" class="footer-links">Sale Exclusions</a></li>
-        <li><a href="#" class="footer-links">Shipping & Returns</a></li>
-        <li><a href="#" class="footer-links">Terms & Conditions</a></li>
-        <li><a href="#" class="footer-links">Privacy Policy</a></li>
-        <li><a href="#" class="footer-links">Search</a></li>
+    <div class="footer__section">
+      <h2 class="footer__title">Customer Information</h2>
+      <ul class="footer__links">
+        <li><a href="#" class="footer__link">Contact Us</a></li>
+        <li><a href="#" class="footer__link">Sale Exclusions</a></li>
+        <li><a href="#" class="footer__link">Shipping & Returns</a></li>
+        <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+        <li><a href="#" class="footer__link">Search</a></li>
       </ul>
       <p class="copyright">
         Copyright © 2018 Dlk • Design Life Kids
       </p>
     </div>
-    <div class="footer-section__connect">
-      <h2 class="footer-title">Connect</h2>
-      <form class="footer-form">
-        <input type="email" class="footer-input" name="email" placeholder="Email"/>@@include('button/index.html', {
-          "text": "Join"
+    <div class="footer__section">
+      <h2 class="footer__title">Connect</h2>
+      <form class="footer__form">
+        <input type="email" class="footer__input" name="email" placeholder="Email"/>@@include('button/index.html', {
+          "text": "Join",
+          "class": "button",
+          "type": "type='submit'"
         })
       </form>
-      <ul class="social-list">
-        <li><a href="#" class="social-link"><img src="./static/images/Facebook.svg" alt="Facebook" /></a></li>
-        <li><a href="#" class="social-link"><img src="./static/images/Twitter.svg" alt="Twitter" /></a></li>
-        <li><a href="#" class="social-link"><img src="./static/images/Pinterest.svg" alt="Pinterest" /></a></li>
-        <li><a href="#" class="social-link"><img src="./static/images/Instagram.svg" alt="Instagram" /></a></li>
-      </ul>
+      @@include('social/index.html')
       <p>
         <a href="#" class="design-company">Web Design — Direct Line Development</a>
       </p>       
