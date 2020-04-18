@@ -24,20 +24,5 @@
   &__text-wrapper {
     width: 380px;
   }
-}
-
-.form-close {
-  display: none;
-}
-
-
-
-
-
-.form-checkbox:checked + .filter-checkbox::before {
-  content: url(./images/check-mark.svg);
-  top: 0;
-  left: 0;
   
-  fill: #C29974;
 }
