@@ -24,13 +24,14 @@
   @@include('button/index.html', {
     "text": "Submit",
     "class": "button modal-window__button",
-    "type": "type='submit'"
+    "type": "submit"
   })
 
   @@if(context.class === "contact-form__popup") {
     @@include('button/index.html', {
       "class": "form-close form-close_js",
-      "text": "+"
+      "text": "+",
+      "type": "button"
     })
   }
 

@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Apparel Kids",
+    "class": "products-list__item category-card__bg-apparel",
+    "style": "background-image: url(/static/images/product-1.png)" 
+  },
+  {
+    "text": "Holiday Shop",
+    "class": "products-list__item category-card__bg-holiday",
+    "style": "background-image: url(/static/images/product-2.png)" 
+  },
+  {
+    "text": "Toys",
+    "class": "products-list__item category-card__bg-toys",
+    "link": "./pages/toys_for_kids/index.html",
+    "style": "background-image: url(/static/images/product-3.png)" 
+  },
+  {
+    "text": "Accessories",
+    "class": "products-list__item category-card__bg-accessories",
+    "style": "background-image: url(/static/images/product-4.png)" 
+  },
+  {
+    "text": "Sale",
+    "class": "products-list__item category-card__bg-sale",
+    "style": "background-image: url(/static/images/product-5.png)" 
+  },
+  {
+    "text": "Apparel Adults",
+    "class": "products-list__item category-card__bg-adults",
+    "style": "background-image: url(/static/images/product-6.png)" 
+  }
+
+]
