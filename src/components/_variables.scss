@@ -1,1 +1,60 @@
-$transition: .5s ease-in-out; 
+// vars
+
+$transition: .5s ease-in-out;
+$color_black: #1E0606;
+$color_white: #fff;
+$title-font: 'Montserrat', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$form-font: 'Roboto', sans-serif;
+$crumbs-font: 'Crimson Text', sans-serif;
+
+
+// argMap
+
+$block-title: (
+  font: $title-font,
+  size: 38px,
+  line: 46px,
+  color: $color_black
+);
+
+$section-title: (
+  font: $title-font,
+  size: 40px,
+  line: 49px,
+  color: $color_black
+);
+
+$body-typo: (
+  font: $body-font,
+  size: 16px,
+  line: 22px,
+  color: $color_black
+);
+
+$form-typo: (
+  font: $form-font,
+  size: 14px,
+  line: 16px,
+  color: $color_black
+);
+
+$crumbs-typo: (
+  font: $crumbs-font,
+  size: 20px,
+  line: 25px,
+  color: $color_black
+);
+
+// mixins
+
+@mixin typography ($font, $size, $line, $color){
+  font-family: $font;
+  font-size: $size;
+  line-height: $line;
+  color: $color;
+
+  @if $font == $title-font {
+    font-weight: bold;
+  }
+}

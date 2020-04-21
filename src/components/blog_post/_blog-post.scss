@@ -9,25 +9,18 @@
   }
 
   &__date {
-    font-family: Roboto;
-    font-size: 16px;
-    line-height: 19px;
+    @include typography ($form-font, 16px, 19px, #818181);
     margin: 20px 0 5px;
   
-    color: #818181;
   }
 
   &__title {
-    font-family: '0Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 31px;
+    @include typography ($title-font, 24px, 31px, $color_black);
     margin: 5px 0 5px;
   }
 
   &__decription {
-    font-size: 18px;
-    line-height: 25px;
+    @include typography ($title-font, 18px, 25px, $color_black);
     margin-top: 10px;
   }
 

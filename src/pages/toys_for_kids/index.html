@@ -32,33 +32,7 @@
               <fieldset>
                 <legend class="toys-form__legend">Color</legend>
                 <div class="toys-form__color">
-                  @@loop('checkbox/index.html', [
-                    {
-                      "class": "checkbox__colors",
-                      "text": "Black",
-                      "name": "color",
-                      "value": "black",
-                      "checked": "checked"
-                    },
-                    {
-                      "class": "checkbox__colors",
-                      "text": "Blue",
-                      "name": "color",
-                      "value": "blue"
-                    },
-                    {
-                      "class": "checkbox__colors",
-                      "text": "Green",
-                      "name": "color",
-                      "value": "green"
-                    },
-                    {
-                      "class": "checkbox__colors",
-                      "text": "White",
-                      "name": "color",
-                      "value": "white"
-                    }
-                  ])
+                  @@loop('checkbox/index.html', 'colors.json')
                 </div>
               </fieldset>
               <fieldset>

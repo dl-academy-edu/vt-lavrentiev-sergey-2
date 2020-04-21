@@ -12,7 +12,7 @@
   {
     "text": "Toys",
     "class": "products-list__item category-card__bg-toys",
-    "link": "./pages/toys_for_kids/index.html",
+    "link": "/pages/toys_for_kids/index.html",
     "style": "background-image: url(/static/images/product-3.png)" 
   },
   {

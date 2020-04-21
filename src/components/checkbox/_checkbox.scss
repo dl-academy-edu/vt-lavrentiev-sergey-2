@@ -1,3 +1,5 @@
+@import "variables";
+
 .checkbox {
   display: flex;
   cursor: pointer;
@@ -40,10 +42,10 @@
   }
 
   &__text {
-    font-family: Roboto;
-    font-size: 14px;
-    line-height: 16px;
+     @include typography ($form-typo...);
+  }
 
-    color: #1E0606;
+  &__toys {
+    @include typography ($body-typo...);
   }
 }

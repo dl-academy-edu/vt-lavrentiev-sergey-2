@@ -1,0 +1,31 @@
+[
+  {
+    "class": "checkbox__colors",
+    "text": "Black",
+    "name": "color",
+    "value": "black",
+    "checked": "checked",
+    "text-style": "checkbox__toys"
+  },
+  {
+    "class": "checkbox__colors",
+    "text": "Blue",
+    "name": "color",
+    "value": "blue",
+    "text-style": "checkbox__toys"
+  },
+  {
+    "class": "checkbox__colors",
+    "text": "Green",
+    "name": "color",
+    "value": "green",
+    "text-style": "checkbox__toys"
+  },
+  {
+    "class": "checkbox__colors",
+    "text": "White",
+    "name": "color",
+    "value": "white",
+    "text-style": "checkbox__toys"
+  }
+]

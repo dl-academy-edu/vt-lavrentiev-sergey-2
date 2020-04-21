@@ -1,4 +1,4 @@
-@import "./variables";
+@import "variables";
 
 .pagination {
   position: relative;
@@ -35,13 +35,8 @@
   }
 
   &__num {
-    font-family: 'Montserrat' sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-
-    text-transform: uppercase;
-    color: #1E0606;
+    @include typography($title-font, 16px, 20px, $color_black);
+   
     transition: opacity $transition;
 
     &:hover {

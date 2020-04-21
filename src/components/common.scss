@@ -2,11 +2,7 @@
 
 body { 
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #1E0606;
+  @include typography ($body-typo...);
 }
 
 a { 
@@ -55,10 +51,12 @@ img {
 }
 
 .block-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
+  @include typography($block-title...);
+  text-transform: uppercase;
+}
+
+.section-title {
+  @include typography($section-title...);
   text-transform: uppercase;
 }
 
@@ -83,13 +81,9 @@ img {
   }
 
   &__link {
-    font-family: 'Crimson Text';
+    @include typography ($crumbs-typo...);
     font-style: italic;
-    font-size: 20px;
-    line-height: 25px;
     transition: opacity $transition;
-  
-    color: #1E0606;
     z-index: 1000;
 
     &:hover {
@@ -98,12 +92,8 @@ img {
   }
   
   .breadcrumb {
-    font-family: Crimson Text;
+    @include typography ($crumbs-typo...);
     font-style: italic;
-    font-size: 20px;
-    line-height: 25px;
-    
-    color: #1E0606;
     opacity: 0.5;
   }
 }
