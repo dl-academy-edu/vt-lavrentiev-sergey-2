@@ -16,53 +16,53 @@
         <div class="container">
           <h1 class="section-title">Toy for kids</h1>
           <ul class="breadcrumbs">
-            <li class="breadcrumbs__item"><a href="../../index.html" class="breadcrumbs__link">Home</a></li>
-            <li class="breadcrumbs__item"><a href="../category-products/index.html" class="breadcrumbs__link">Catalog</a></li>
-            <li class="breadcrumb breadcrumbs__item">Toys</li>
+            <li class="breadcrumbs__link"><a href="../../index.html" class="breadcrumbs__link_active">Home</a></li>
+            <li class="breadcrumbs__link"><a href="../category-products/index.html" class="breadcrumbs__link_active">Catalog</a></li>
+            <li class="breadcrumbs__link breadcrumbs__link_current">Toys</li>
           </ul>
         </div>
           <form class="toys-form">
             <div class="container toys-form__wrapper">
-              <fieldset>
+              <fieldset class="toys-form__group">
                 <legend class="toys-form__legend">Cost</legend>
                 <label>
                   <input class="toys-form__range" type="range" name="cost" min="0" max="500" value="100">
                 </label>
               </fieldset>
-              <fieldset>
+              <fieldset class="toys-form__group">
                 <legend class="toys-form__legend">Color</legend>
                 <div class="toys-form__color">
                   @@loop('checkbox/index.html', 'colors.json')
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="toys-form__group">
                 <legend class="toys-form__legend">Delivery</legend>
                 <label class="toys-form__delivery">
-                  <input class="delivery__input hidden" type="radio" name="delivery" value="free">
-                  <span class="toys-form__radio-btn"></span>
-                  <span class="input__text">Free shipping</span>
+                  <input class="toys-form__input hidden" type="radio" name="delivery" value="free">
+                  <span class="toys-form__radio"></span>
+                  <span class="toys-form__text">Free shipping</span>
                 </label>
                 <label class="toys-form__delivery">
-                  <input class="delivery__input hidden" type="radio" name="delivery" value="fast" checked>
-                  <span class="toys-form__radio-btn"></span>
-                  <span class="input__text">Fast shipping</span>
+                  <input class="toys-form__input hidden" type="radio" name="delivery" value="fast" checked>
+                  <span class="toys-form__radio"></span>
+                  <span class="toys-form__text">Fast shipping</span>
                 </label>
               </fieldset>
-              <fieldset>
+              <fieldset class="toys-form__group">
                 <legend class="toys-form__legend">Amount</legend>
                 <div class="toys-form__amount">
-                  <input class="amount__input hidden" type="radio" id="amount1" name="amount" value="0-5" checked>
+                  <input class="hidden" type="radio" id="amount1" name="amount" value="0-5" checked>
                   <label for="amount1" class="amount__label">0-5</label>
-                  <input class="amount__input hidden" type="radio" id="amount2" name="amount" value="10-20">
+                  <input class="hidden" type="radio" id="amount2" name="amount" value="10-20">
                   <label for="amount2" class="amount__label">10-20</label>
-                  <input class="amount__input hidden" type="radio" id="amount3" name="amount" value="20-50">
+                  <input class="hidden" type="radio" id="amount3" name="amount" value="20-50">
                   <label for="amount3" class="amount__label">20-50</label>
                 </div>
               </fieldset>
               @@include('button/index.html', {
                 "text": "Apply",
-                "class": "button filter-button",
-                "type": "type='submit'"
+                "class": "button toys-form__button",
+                "type": "submit"
               })
             </div>
           </form>

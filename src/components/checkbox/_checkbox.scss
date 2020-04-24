@@ -13,11 +13,6 @@
     }
   }
 
-  &__contact-form {
-    margin-bottom: 20px;
-    flex: 0 1 100%;
-  }
-
   &__input {
     display: flex;
     position: relative;
@@ -41,7 +36,7 @@
     cursor: pointer;
   }
 
-  &__text {
+  &__form {
      @include typography ($form-typo...);
   }
 

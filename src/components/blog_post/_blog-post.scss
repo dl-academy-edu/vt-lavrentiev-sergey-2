@@ -1,11 +1,15 @@
 .blog-post {
-  display: flex;
-  flex-direction: column;
-  width: 380px;
-  padding: 20px 0;
 
-  &:hover .blog-post__title {
-    text-decoration: underline;
+    &__article {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding: 20px 0;
+
+    &:hover .blog-post__title {
+      text-decoration: underline;
+    }
+
   }
 
   &__date {

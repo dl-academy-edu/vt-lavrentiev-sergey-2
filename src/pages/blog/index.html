@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Category products</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
     <link rel="stylesheet" href="style.css">
@@ -16,10 +16,10 @@
       <section class="blog container">
         <h1 class="section-title">Blog</h1>
         <ul class="breadcrumbs">
-          <li class="breadcrumbs__item"><a href="../../index.html" class="breadcrumbs__link">Home</a></li>
-          <li class="breadcrumb breadcrumbs__item"> Blog</li>
+          <li class="breadcrumbs__link"><a href="../../index.html" class="breadcrumbs__link_active">Home</a></li>
+          <li class="breadcrumbs__link breadcrumbs__link_current"> Blog</li>
         </ul>
-        <div class="blog-articles">
+        <div class="blog-post">
           @@loop('blog_post/index.html', 'blog-posts.json')
         </div>
         @@include('pagination/index.html')

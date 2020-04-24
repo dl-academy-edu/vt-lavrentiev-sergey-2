@@ -1,33 +1,33 @@
 [
   {
     "text": "Apparel Kids",
-    "class": "products-list__item category-card__bg-apparel",
+    "class": "category__bg category__bg_apparel",
     "style": "background-image: url(/static/images/product-1.png)" 
   },
   {
     "text": "Holiday Shop",
-    "class": "products-list__item category-card__bg-holiday",
+    "class": "category__bg category__bg_holiday",
     "style": "background-image: url(/static/images/product-2.png)" 
   },
   {
     "text": "Toys",
-    "class": "products-list__item category-card__bg-toys",
+    "class": "category__bg category__bg_toys",
     "link": "/pages/toys_for_kids/index.html",
     "style": "background-image: url(/static/images/product-3.png)" 
   },
   {
     "text": "Accessories",
-    "class": "products-list__item category-card__bg-accessories",
+    "class": "category__bg category__bg_accessories",
     "style": "background-image: url(/static/images/product-4.png)" 
   },
   {
     "text": "Sale",
-    "class": "products-list__item category-card__bg-sale",
+    "class": "category__bg category__bg_sale",
     "style": "background-image: url(/static/images/product-5.png)" 
   },
   {
     "text": "Apparel Adults",
-    "class": "products-list__item category-card__bg-adults",
+    "class": "category__bg category__bg_adults",
     "style": "background-image: url(/static/images/product-6.png)" 
   }
 

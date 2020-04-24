@@ -1,4 +1,4 @@
-var openModule = document.querySelector('.slider-button__explore_js');
+var openModule = document.querySelector('.hero-slider__button_js');
 var closeModule = document.querySelector('.form-close_js');
 var moduleWindow = document.querySelector('.modal-window_js');
 var input = document.querySelector('.modal-window__input');

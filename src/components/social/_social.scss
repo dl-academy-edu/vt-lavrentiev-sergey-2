@@ -2,13 +2,13 @@
   flex-grow: 1;
   display: flex;
   margin-top: 0;
-}
 
-.footer__social-link {
-  margin-right: 15px;
-  transition: opacity $transition;
-
-  &:hover {
-    opacity: .5;
+  &__social-link {
+    margin-right: 15px;
+    transition: opacity $transition;
+  
+    &:hover {
+      opacity: .5;
+    }
   }
 }

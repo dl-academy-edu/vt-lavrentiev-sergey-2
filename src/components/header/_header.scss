@@ -30,59 +30,35 @@
     flex-wrap: wrap;
   }
 
-  &__link-list {
+  &__links {
     display: flex;
     margin-left: 60px;
     align-items: center;
-  }
+  }  
 
-  &__link {
+  a {
     @include typography ($body-font, 16px, 19px, $color_black);
     text-transform: uppercase;
     cursor: pointer;
-    margin-right: 20px;
-  
     transition: opacity $transition;
 
-    &:hover {
+     &:hover {
       opacity: .5;
     }
 
     &:active {
       opacity: .2;
     }
+  }
+
+  &__link,
+  &__search {
+    margin-right: 20px;
   }
 
   &__contacts {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__search {
-    transition: opacity $transition;
-
-    &:hover {
-      opacity: .5;
-    }
-
-    &:active {
-      opacity: .2;
-    }
-  }
-
-  &__contact-link {
-    text-shadow: 1px 0 0 #1E0606;
-    margin-left: 24px;
-    text-transform: uppercase;
-    transition: opacity $transition;
-
-    &:hover {
-      opacity: .5;
-    }
-
-    &:active {
-      opacity: .2;
-    }
   }
 }

@@ -83,6 +83,20 @@
       @include typography ($body-font, 16px, 22px, #EBEBEB);
     }
   }
+
+  &__copyright {
+    margin-top: 50px;
+  }
+
+  &__developer {
+    color: #A2A2A2;
+    transition: all $transition;
+
+    &:hover {
+      text-decoration: underline;
+      color: $color_white;
+    }
+  }
 }
 
 .rating {
@@ -90,25 +104,12 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 50px;
-}
 
-.company-rating {
-  margin-right: 25px;
-}
+  &__group {
+    margin-right: 25px;
+  }
 
-.star {
-  margin-right: 3px;
-}
-
-.copyright {
-  margin-top: 50px;
-}
-
-.design-company {
-  color: #A2A2A2;
-}
-
-.design-company:hover {
-  text-decoration: underline;
-  color: #FFFFFF;
+  &__star {
+    margin-right: 3px;
+  }
 }

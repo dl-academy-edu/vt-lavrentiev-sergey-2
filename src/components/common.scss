@@ -66,7 +66,7 @@ img {
   display:  block;
   padding-bottom: 14px;
 
-  &__item {
+  &__link {
     display: inline-block;
     position: relative;
 
@@ -78,24 +78,27 @@ img {
       height: 12px;
       margin: 0 20px;
     }
-  }
 
-  &__link {
-    @include typography ($crumbs-typo...);
-    font-style: italic;
-    transition: opacity $transition;
-    z-index: 1000;
+    &_active {
+      @include typography ($crumbs-typo...);
+      font-style: italic;
+      transition: opacity $transition;
+      z-index: 1000;
 
-    &:hover {
-      opacity: .7;
+      &:hover {
+        opacity: .7;
+      }
+
     }
+ 
+    &_current {
+      @include typography ($crumbs-typo...);
+      font-style: italic;
+      opacity: 0.5;
+    }
+
   }
   
-  .breadcrumb {
-    @include typography ($crumbs-typo...);
-    font-style: italic;
-    opacity: 0.5;
-  }
 }
 
 // Подключение компонентов

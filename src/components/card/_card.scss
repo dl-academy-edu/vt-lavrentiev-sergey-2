@@ -1,17 +1,21 @@
-.category-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 280px;
-  min-height: 270px;
-  cursor: pointer;
+.category {
 
-  &:hover span{
-    text-decoration: underline;
-  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    min-height: 270px;
+    cursor: pointer;
+  
+    &:hover span{
+      text-decoration: underline;
+    }
 
-  &:active span{
-    text-decoration: underline;
+    &:active span{
+      text-decoration: underline;
+    }
+
   }
 
   &__link {
@@ -23,7 +27,7 @@
 
   }
   
-  &__text {
+  &__name {
     @include typography ($title-font, 26px, 32px, $color_white);
 
     text-align: center;
@@ -32,45 +36,35 @@
     padding: 0 45px;
   }
 
-  &__bg-apparel {
-    background-color: #DBE4DB;
+  &__bg {
     background-repeat: no-repeat;
     background-position: center center;
     background-blend-mode: multiply;
+
+    &_apparel {
+      background-color: #DBE4DB;
+    }
+
+    &_holiday {
+      background-color: rgba(186, 142, 107, 0.3);
+    }
+
+    &_toys {
+      background-color: #F8F2DA;
+    }
+
+    &_accessories {
+      background-color: rgba(9, 3, 79, 0.17);
+    }
+
+    &_sale {
+      background-color: rgba(207, 68, 111, 0.25);
+    }
+
+    &_adults {
+      background-color: rgba(125, 151, 218, 0.2);
+    }
+
   }
 
-  &__bg-holiday {
-    background-color: rgba(186, 142, 107, 0.3);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: multiply;
-  }
-
-  &__bg-toys {
-    background-color: #F8F2DA;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: multiply;
-  }
-
-  &__bg-accessories {
-    background-color: rgba(9, 3, 79, 0.17);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: multiply;
-  }
-
-  &__bg-sale {
-    background-color: rgba(207, 68, 111, 0.25);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: multiply;
-  }
-
-  &__bg-adults {
-    background-color: rgba(125, 151, 218, 0.2);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: multiply;
-  }
 }

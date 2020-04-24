@@ -17,11 +17,19 @@
           <h1 class="hidden">Design Kids Life Collection</h1>
           <div class="hero-slider__nav">
             <p class="hero-slider__number">01</p>
-            <ul class="hero-slider__list-btn">
-              <li class="nav-btn__item"><button class="slider-button slider-button_selected"></button></li>
-              <li class="nav-btn__item"><button class="slider-button"></button></li>
-              <li class="nav-btn__item"><button class="slider-button"></button></li>
-              <li class="nav-btn__item"><button class="slider-button"></button></li>
+            <ul class="hero-slider__links">
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn hero-slider__btn_selected"></button>
+              </li>
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn"></button>
+              </li>
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn"></button>
+              </li>
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn"></button>
+              </li>
             </ul>
           </div>
           <div class="hero-slider__list">
@@ -31,10 +39,10 @@
                 <p class="hero-slider__subtitle">Designed in Slovenia</p>
                 @@include('button/link-btn.html', {
                   "text": "Explore Now",
-                  "class": "button slider-button__explore slider-button__explore_js"
+                  "class": "button hero-slider__button hero-slider__button_js"
                 })
               </div>
-              <div class="hero-slider__item-thumb">
+              <div class="hero-slider__item_thumb">
                 <img src="./static/images/poster.png" class="hero-slider__poster" alt="oh no collection">
               </div>
             </div>
@@ -50,32 +58,32 @@
         <ul class="category__list">
           @@include('card/index.html', {
             "text": "Apparel Kids",
-            "class": "category-card__bg-apparel",
+            "class": "category__bg category__bg_apparel",
             "style": "background-image: url(./static/images/product-1.png)" })
           @@include('card/index.html', {
             "text": "Holiday Shop",
-            "class": "category-card__bg-holiday",
+            "class": "category__bg category__bg_holiday",
             "style": "background-image: url(./static/images/product-2.png)" })
           @@include('card/index.html', {
             "text": "Toys",
-            "class": "category-card__bg-toys",
+            "class": "category__bg category__bg_toys",
             "link": "./pages/toys_for_kids/index.html",
             "style": "background-image: url(./static/images/product-3.png)" })
           @@include('card/index.html', {
             "text": "Accessories",
-            "class": "category-card__bg-accessories",
+            "class": "category__bg category__bg_accessories",
             "style": "background-image: url(./static/images/product-4.png)" })
         </ul>
-        <div class="category-description">
-          <div class="category-description__button">
-            <button class="arrow">
-              <span class="arrow_left"></span>
+        <div class="category__nav">
+          <div class="category__buttons">
+            <button class="category__button">
+              <span class="category__button_left"></span>
             </button>
-            <button class="arrow">
-              <span class="arrow_right"></span>
+            <button class="category__button">
+              <span class="category__button_right"></span>
             </button>
           </div>
-          <p class="category-description__text">
+          <p class="category__text">
             Modern finds for the modern home. Curated goods by unique
             designers around the world from fashion to furniture for
             kids and adults.
@@ -91,7 +99,7 @@
             <li><button class="services__button">Guarantee</button></li>
             <li><button class="services__button">Credit</button></li>
           </ul>
-          <div class="services-text">
+          <div class="services__text">
             <p>
               Some days i feel like i've been working on dlk my entire
               life and there are other days that i am completely shocked
@@ -113,11 +121,11 @@
       </section>
       <section class="partners container">
         <h2 class="hidden">Partners</h2>
-        <ul class="partner-list">
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-1.png" alt="Mail.ru"/></a></li>
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-2.png" alt="apple"/></a></li>
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-3.png" alt="Eltex"/></a></li>
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-4.png" alt="Owox"/></a></li>
+        <ul class="partners__list">
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-1.png" alt="Mail.ru"/></a></li>
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-2.png" alt="apple"/></a></li>
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-3.png" alt="Eltex"/></a></li>
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-4.png" alt="Owox"/></a></li>
         </ul>
       </section>
       <section class="container block-article">
@@ -131,7 +139,7 @@
           </p>
           @@include('button/link-btn.html', {
             "text": "Buy Now",
-            "class": "button",
+            "class": "button about__btn",
             "type": "submit"
           })
         </article>
@@ -142,15 +150,20 @@
             and there are other days that i am completely shocked that
             four years have flown by. It's simply magical.
           </p>
-          <div class="map">
+          <div class="contacts__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5357565744243!2d49.288136315736814!3d53.512487980014185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2sProspekt%20Stepana%20Razina%2C%2044%2C%20Tolyatti%2C%20Samarskaya%20oblast&#39;%2C%20445027!5e0!3m2!1sen!2sru!4v1581966809722!5m2!1sen!2sru" width="483" height="196" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </div>
         </article>
       </section>
       <div class="modal-window modal-window_js modal-window_close">
-        @@include('contact_form/index.html', {
-          "class": "contact-form__popup"
-        })
+        <div class="modal-window__content">
+          @@include('contact_form/index.html')
+          @@include('button/index.html', {
+            "class": "form-close form-close_js",
+            "text": "+",
+            "type": "button"
+          })
+        </div>
       </div>
     </main>
     @@include('footer/index.html')

@@ -62,6 +62,11 @@
     @include typography ($form-typo...);
   }
 
+  &__checkbox {
+    margin-bottom: 20px;
+    flex: 0 1 100%;
+  }
+
   &__button {
     align-self: end;
   }
