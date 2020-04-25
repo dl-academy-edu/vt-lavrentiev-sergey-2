@@ -1,138 +1,102 @@
-footer {
+@import "variables";
+
+.footer {
   background: #434343;
   color: #FFFFFF;
   padding: 90px 0;
-}
 
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.footer-section {
-  width: 380px;
-  min-height: 280px;
+  &__section {
+    width: 380px;
+    min-height: 280px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-}
-
-.footer-section__connect {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  position: relative;
-}
-
-.footer-section::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 380px;
-  background-color: #666666;
-  top: 50px;
-  left: 0;
-}
-
-.footer-section__connect::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 380px;
-  background-color: #666666;
-  top: 50px;
-  left: 0;
-}
-
-.footer-section::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 380px;
-  background-color: #666666;
-  bottom: 50px;
-  left: 0;
-}
-
-.footer-section__connect::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 380px;
-  background-color: #666666;
-  bottom: 50px;
-  left: 0;
-}
-
-.footer-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
   
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #AAAAAA;
-  
-  margin-bottom: 50px;
-  position: relative;
-}
+    &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 380px;
+    background-color: #666666;
+    top: 50px;
+    left: 0;
+    }
 
-.social-list {
-  flex-grow: 1;
-  display: flex;
-  margin-top: 0;
-}
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 380px;
+      background-color: #666666;
+      bottom: 50px;
+      left: 0;
+    }
+  }
 
-.footer-links {
-  display: inline-block;
-  margin-bottom: 15px;
-  transition: opacity ease-in-out .5s;
-  color: #FFFFFF;
-}
+  &__title {
+    @include typography ($body-font, 16px, 22px, #AAAAAA);
+    font-weight: normal;
+    margin-bottom: 50px;
+    position: relative;
+  }
 
-.footer-links:hover {
-  opacity: .5;
-}
+  &__link {
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: opacity $transition;
+    color: #FFFFFF;
 
-.footer-form {
-  display: inline-block;
-  max-width: 380px;
-  margin-bottom: 25px;
-}
+    &:hover {
+      opacity: .5;
+    }
+  }
 
-.footer-input {
-  display: inline-block;
-  outline: none;
-  background-color: #666666;;
-  border: none;
-  height: 40px;
-  width: 298px;
-  padding: 9px 15px;
-  transition: border ease-in-out .5s;
-}
+  &__form {
+    display: inline-block;
+    max-width: 380px;
+    margin-bottom: 25px;
+  }
 
-.footer-input:hover {
-  border: 1px solid #FFFDFD;
-}
+  &__input {
+    display: inline-block;
+    outline: none;
+    background-color: #666666;;
+    border: none;
+    height: 40px;
+    width: 298px;
+    padding: 9px 15px;
+    transition: box-shadow $transition;
+    color: #fff;
 
-.footer-input::placeholder {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+    &:hover {
+      box-shadow: 0 0 0 1px #FFFDFD;
+    }
 
-  color: #EBEBEB;
-}
+    &::placeholder {
+      @include typography ($body-font, 16px, 22px, #EBEBEB);
+    }
+  }
 
-.social-link {
-  margin-right: 15px;
-  transition: opacity ease-in-out .5s;
-}
+  &__copyright {
+    margin-top: 50px;
+  }
 
-.social-link:hover {
-  opacity: .5;
+  &__developer {
+    color: #A2A2A2;
+    transition: all $transition;
+
+    &:hover {
+      text-decoration: underline;
+      color: $color_white;
+    }
+  }
 }
 
 .rating {
@@ -140,25 +104,12 @@ footer {
   justify-content: flex-start;
   align-items: center;
   margin-top: 50px;
-}
 
-.company-rating {
-  margin-right: 25px;
-}
+  &__group {
+    margin-right: 25px;
+  }
 
-.star {
-  margin-right: 3px;
-}
-
-.copyright {
-  margin-top: 50px;
-}
-
-.design-company {
-  color: #A2A2A2;
-}
-
-.design-company:hover {
-  text-decoration: underline;
-  color: #FFFFFF;
+  &__star {
+    margin-right: 3px;
+  }
 }

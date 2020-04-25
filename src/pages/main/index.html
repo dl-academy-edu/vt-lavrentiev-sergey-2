@@ -4,37 +4,46 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link href="./common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="./static/images/favicon.ico">
-    <title>Главная</title>
+    <link rel="shortcut icon" href="../../static/images/favicon.ico">
+    <title>Personal project</title>
   </head>
   <body>
     @@include('header/index.html')
     <main>
       <section class="hero-slider container">
         <div class="hero-slider__wrapper">
-          <div class="hero-slider__inner">
-            <h1 class="hidden">Design Kids Life Collection</h1>
-            <div class="hero-slider__nav">
-              <p class="hero-slider__number">01</p>
-              <ul class="hero-slider__list-btn">
-                <li class="nav-btn__item"><button class="slider-button slider-button_selected"></button></li>
-                <li class="nav-btn__item"><button class="slider-button"></button></li>
-                <li class="nav-btn__item"><button class="slider-button"></button></li>
-                <li class="nav-btn__item"><button class="slider-button"></button></li>
-              </ul>
-            </div>
-            <div class="hero-slider__list">
-              <div class="hero-slider__item">
-                <div class="hero-slider__content">
-                  <h2 class="hero-slider__title">THE OOH NOO COLLECTION</h2>
-                  <p class="hero-slider__subtitle">Designed in Slovenia</p>
-                  <a href="#" class="button slider-button__explore slider-button__explore_js">Explore Now</a>
-                </div>
-                <div class="hero-slider__item-thumb">
-                  <img src="./static/images/poster.png" class="poster" alt="oh no collection">
-                </div>
+          <h1 class="hidden">Design Kids Life Collection</h1>
+          <div class="hero-slider__nav">
+            <p class="hero-slider__number">01</p>
+            <ul class="hero-slider__links">
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn hero-slider__btn_selected"></button>
+              </li>
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn"></button>
+              </li>
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn"></button>
+              </li>
+              <li class="hero-slider__link">
+                <button class="hero-slider__btn"></button>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-slider__list">
+            <div class="hero-slider__item">
+              <div class="hero-slider__content">
+                <h2 class="hero-slider__title">THE OOH NOO COLLECTION</h2>
+                <p class="hero-slider__subtitle">Designed in Slovenia</p>
+                @@include('button/link-btn.html', {
+                  "text": "Explore Now",
+                  "class": "button hero-slider__button hero-slider__button_js"
+                })
+              </div>
+              <div class="hero-slider__item_thumb">
+                <img src="./static/images/poster.png" class="hero-slider__poster" alt="oh no collection">
               </div>
             </div>
           </div>
@@ -45,39 +54,36 @@
         </p>
       </section>
       <section class="category container">
-        <h2 class="block-title category-title">Category Products</h2>
-        <ul class="category-list">
-          <li class="category-list__item category-product__bg-apparel" style="background-image: url(./static/images/product-1.png)">
-            <a href="#" class="category-products__link" >
-              <span class="category-products__text">APPAREL KIDS</span>
-            </a>
-          </li>
-          <li class="category-list__item category-product__bg-holiday" style="background-image: url(./static/images/product-2.png)">
-            <a href="#" class="category-products__link">
-              <span class="category-products__text">HOLIDAY SHOP</span>
-            </a>
-          </li>
-          <li class="category-list__item category-product__bg-toys" style="background-image: url(./static/images/product-3.png)">
-            <a href="pages/toys-for-kids/index.html" class="category-products__link">
-              <span class="category-products__text">TOYS</span>
-            </a>
-          </li>
-          <li class="category-list__item category-product__bg-accessories" style="background-image: url(./static/images/product-4.png)">
-            <a href="#" class="category-products__link">
-              <span class="category-products__text">ACCESSORIES</span>
-            </a>
-          </li>
+        <h2 class="block-title category__title">Category Products</h2>
+        <ul class="category__list">
+          @@include('card/index.html', {
+            "text": "Apparel Kids",
+            "class": "category__bg category__bg_apparel",
+            "style": "background-image: url(./static/images/product-1.png)" })
+          @@include('card/index.html', {
+            "text": "Holiday Shop",
+            "class": "category__bg category__bg_holiday",
+            "style": "background-image: url(./static/images/product-2.png)" })
+          @@include('card/index.html', {
+            "text": "Toys",
+            "class": "category__bg category__bg_toys",
+            "link": "./pages/toys_for_kids/index.html",
+            "style": "background-image: url(./static/images/product-3.png)" })
+          @@include('card/index.html', {
+            "text": "Accessories",
+            "class": "category__bg category__bg_accessories",
+            "style": "background-image: url(./static/images/product-4.png)" })
         </ul>
-        <div class="category-description">
-          <div class="categoty-description__button">
-            <button class="arrow">
-              <span class="arrow_left"></span>
+        <div class="category__nav">
+          <div class="category__buttons">
+            <button class="category__button">
+              <span class="category__button_left"></span>
             </button>
-            <button class="arrow">
-              <span class="arrow_right"></span>
+            <button class="category__button">
+              <span class="category__button_right"></span>
             </button>
           </div>
-          <p class="category-description__text">
+          <p class="category__text">
             Modern finds for the modern home. Curated goods by unique
             designers around the world from fashion to furniture for
             kids and adults.
@@ -85,15 +91,15 @@
         </div>
       </section>
       <section class="services container">
-        <img class="services-image" src="./static/images/Delivery.jpg" alt="lady" />
-        <div class="services-wrapper">
-          <h2 class="block-title services-title">Delivery</h2>
-          <ul class="services-list">
-            <li><button class="services-button services-button_active">Delivery</button></li>
-            <li><button class="services-button">Guarantee</button></li>
-            <li><button class="services-button">Credit</button></li>
+        <img class="services__image" src="./static/images/Delivery.jpg" alt="lady" />
+        <div class="services__wrapper">
+          <h2 class="block-title services__title">Delivery</h2>
+          <ul class="services__buttons">
+            <li><button class="services__button services__button_active">Delivery</button></li>
+            <li><button class="services__button">Guarantee</button></li>
+            <li><button class="services__button">Credit</button></li>
           </ul>
-          <div class="services-text">
+          <div class="services__text">
             <p>
               Some days i feel like i've been working on dlk my entire
               life and there are other days that i am completely shocked
@@ -106,43 +112,61 @@
               we work with to thank!
             </p>
           </div>
-          <a href="#" class="button services-btn__learn">Learn more</a>
+          @@include('button/link-btn.html', {
+            "text": "Learn More",
+            "class": "button services__btn-learn",
+            "type": "submit"
+          })
         </div>
       </section>
       <section class="partners container">
         <h2 class="hidden">Partners</h2>
-        <ul class="partner-list">
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-1.png" alt="Mail.ru"/></a></li>
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-2.png" alt="apple"/></a></li>
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-3.png" alt="Eltex"/></a></li>
-          <li><a href="#" class="partner-list__item"><img src="./static/images/partner-4.png" alt="Owox"/></a></li>
+        <ul class="partners__list">
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-1.png" alt="Mail.ru"/></a></li>
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-2.png" alt="apple"/></a></li>
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-3.png" alt="Eltex"/></a></li>
+          <li><a href="#" class="partners__item"><img src="./static/images/partner-4.png" alt="Owox"/></a></li>
         </ul>
       </section>
-    </main>
-    <div class="container block-article">
-      <article class="about">
-        <h2 class="block-title about-title">Design Life Kids</h2>
-        <div class="about-subtitle">About Us</div>
-        <p class="about-text">
-          Some days i feel like i've been working on dlk my entire life
-          and there are other days that i am completely shocked that
-          four years have flown by. It's simply magical.
-        </p>
-        <a href="#" class="button block-article__button">Buy Now</a>
-      </article>
-      <article class="contacts">
-        <h2 class="block-title contacts-title">Contacts</h2>
-        <p class="contacts-text">
-          Some days i feel like i've been working on dlk my entire life
-          and there are other days that i am completely shocked that
-          four years have flown by. It's simply magical.
-        </p>
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5357565744243!2d49.288136315736814!3d53.512487980014185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2sProspekt%20Stepana%20Razina%2C%2044%2C%20Tolyatti%2C%20Samarskaya%20oblast&#39;%2C%20445027!5e0!3m2!1sen!2sru!4v1581966809722!5m2!1sen!2sru" width="483" height="196" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <section class="container block-article">
+        <article class="about">
+          <h2 class="block-title about__title">Design Life Kids</h2>
+          <div class="about__subtitle">About Us</div>
+          <p class="about__text">
+            Some days i feel like i've been working on dlk my entire life
+            and there are other days that i am completely shocked that
+            four years have flown by. It's simply magical.
+          </p>
+          @@include('button/link-btn.html', {
+            "text": "Buy Now",
+            "class": "button about__btn",
+            "type": "submit"
+          })
+        </article>
+        <article class="contacts">
+          <h2 class="block-title contacts__title">Contacts</h2>
+          <p class="contacts__text">
+            Some days i feel like i've been working on dlk my entire life
+            and there are other days that i am completely shocked that
+            four years have flown by. It's simply magical.
+          </p>
+          <div class="contacts__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5357565744243!2d49.288136315736814!3d53.512487980014185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2sProspekt%20Stepana%20Razina%2C%2044%2C%20Tolyatti%2C%20Samarskaya%20oblast&#39;%2C%20445027!5e0!3m2!1sen!2sru!4v1581966809722!5m2!1sen!2sru" width="483" height="196" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+        </article>
+      </section>
+      <div class="modal-window modal-window_js modal-window_close">
+        <div class="modal-window__content">
+          @@include('contact_form/index.html')
+          @@include('button/index.html', {
+            "class": "form-close form-close_js",
+            "text": "+",
+            "type": "button"
+          })
         </div>
-      </article>
-    </div>
+      </div>
+    </main>
     @@include('footer/index.html')
-    <script src="script.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+@import "variables";
+
+.checkbox {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  &__colors {
+    margin-bottom: 18px;
+
+    &:hover .checkbox__text {
+      text-decoration: underline;
+    }
+  }
+
+  &__input {
+    display: flex;
+    position: relative;
+
+    &:checked + .checkbox__box::before {
+      content: url(../../static/images/check-mark.svg);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__box {
+    display: block;
+
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+
+    border: 2px solid #C29974;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  &__form {
+     @include typography ($form-typo...);
+  }
+
+  &__toys {
+    @include typography ($body-typo...);
+  }
+}

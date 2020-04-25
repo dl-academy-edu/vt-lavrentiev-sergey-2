@@ -1,0 +1,28 @@
+@import '../../components/variables';
+
+.contact-us {
+  padding-bottom: 60px;
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    width: 380px;
+  }
+
+  &__text {
+    margin-top: 0;
+
+    &_brown {
+      @include typography($title-font, 26px, 34px, $color_brown);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 20px;
+    
+    }
+  
+  }
+
+}

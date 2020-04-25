@@ -1,0 +1,130 @@
+@import '../../components/variables';
+
+.toys-form {
+  margin-top: 36px;
+  background-color: rgba(125, 151, 218, 0.2);
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 42px 175px 42px 20px;
+  }
+  &__group {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  &__legend {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  &__range {
+    background: linear-gradient(to right, #C29974 0%, #C29974 20%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 100%);
+    border: none;
+    border-radius: 8px;
+    height: 4px;
+    width: 188px;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  
+  &__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; 
+    border: 8px solid #C29974;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  &__color {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__delivery {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    &:hover .toys-form__text {
+      text-decoration: underline;
+    }
+  }
+  
+  
+  &__input:checked + &__radio::before {
+    content: '';
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #C29974;
+  }
+
+
+  &__radio {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  
+    border: 2px solid #C29974;
+  }
+
+  &__amount {
+    display: inline-flex;
+
+    & > label {
+      padding: 7px 5px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #FFFFFF;
+      transition: background-color $transition;
+
+      &:hover {
+        background-color: #EDDEEB;
+      }
+    
+      &__input:checked + .amount__label {
+        background-color: #F3D0DB;
+      }
+    }
+  }
+  
+  &__button {
+    align-self: baseline;
+    margin-top: 44px;
+  }
+
+}
+
+.toy-slider {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}

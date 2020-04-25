@@ -1,0 +1,39 @@
+.category__card {
+  margin-bottom: 23px;
+  margin-right: 20px;
+
+  &:nth-child(4n) {
+      margin-left: 200px;
+  }
+
+}
+
+
+.products {
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+    padding-top: 20px;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    width: 720px;
+    padding: 0 20px 40px 20px;
+    margin-left: 180px;
+
+    p {
+      margin: 20px 0;
+    }
+    
+  }
+
+}

@@ -1,0 +1,31 @@
+.blog-post {
+
+    &__article {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding: 20px 0;
+
+    &:hover .blog-post__title {
+      text-decoration: underline;
+    }
+
+  }
+
+  &__date {
+    @include typography ($form-font, 16px, 19px, #818181);
+    margin: 20px 0 5px;
+  
+  }
+
+  &__title {
+    @include typography ($title-font, 24px, 31px, $color_black);
+    margin: 5px 0 5px;
+  }
+
+  &__decription {
+    @include typography ($title-font, 18px, 25px, $color_black);
+    margin-top: 10px;
+  }
+
+}

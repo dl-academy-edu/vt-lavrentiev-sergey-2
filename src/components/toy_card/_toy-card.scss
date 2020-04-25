@@ -1,0 +1,55 @@
+.toy-card {
+  width: 380px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "Learn More";
+    position: absolute;
+    width: 207px;
+    height: 207px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E5EAF8;
+    opacity: 0;
+    transition: opacity $transition;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #1E0606;
+    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+  }
+
+  &:hover::before {
+    opacity: .9;
+  }
+
+  &:active::before {
+    opacity: 0.67;
+    }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+  
+    color: #1E0606;
+  }
+
+  &__price {
+    font-weight: bold;
+    text-align: center;
+  }
+
+}
+

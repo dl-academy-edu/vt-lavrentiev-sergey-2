@@ -1,9 +1,6 @@
 .button {
   display: inline-flex;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
   text-transform: uppercase;
   border: none;
   color: #FFFFFF;
@@ -11,17 +8,39 @@
   padding: 9px 22px;
   cursor: pointer;
   transition: background-color ease-in-out .6s;
+
+  &:hover {
+    background-color: #C29974;
+  }
+
+  &:active {
+    background-color: #CFAF91;
+  }
+
+  &:disabled {
+    color: #E1E1E1;
+    background-color: #C1C1C1;
+  }
 }
 
-.button:hover {
-  background-color: #C29974;;
-}
+.grid-button {
+  display: inline-flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 27px;
+  color: #2C3036;
+  background-color: #FFC80C;
+  padding: 19px 41px;
+  cursor: pointer;
+  transition: background-color ease-in-out .6s;
 
-.button:active {
-  background-color: #CFAF91;;
-}
+  &:hover {
+    background-color: #C29974;
+  }
 
-.button:disabled {
-  color: #E1E1E1;
-  background-color: #C1C1C1;;
+  &:active {
+    background-color: #CFAF91;
+  }
+  
 }

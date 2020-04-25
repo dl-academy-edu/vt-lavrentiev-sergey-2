@@ -1,10 +1,8 @@
+@import "./variables";
+
 body { 
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #1E0606;
+  @include typography ($body-typo...);
 }
 
 a { 
@@ -41,24 +39,6 @@ img {
   margin: 0 auto;
 }
 
-/* titles */
-
-.section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 49px;
-  text-transform: uppercase;
-}
-
-.block-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
-  text-transform: uppercase;
-}
-
 .hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -70,100 +50,65 @@ img {
   overflow: hidden;
 }
 
-/* product-cards */
-
-.category-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-
-.category-list__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
-  width: 280px;
-  min-height: 270px;
-  
-}
-
-.category-product__bg-apparel {
-  background-color: #DBE4DB;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.category-product__bg-holiday {
-  background-color: rgba(186, 142, 107, 0.3);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.category-product__bg-toys {
-  background-color: #F8F2DA;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.category-product__bg-accessories {
-  background-color: rgba(9, 3, 79, 0.17);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.category-product__bg-sale {
-  background-color: rgba(207, 68, 111, 0.25);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.category-product__bg-adults {
-  background-color: rgba(125, 151, 218, 0.2);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.category-products__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 32px;
-  text-align: center;
+.block-title {
+  @include typography($block-title...);
   text-transform: uppercase;
-
-  color: #FFFFFF;
-  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25); 
 }
 
-.category-products__link {
-  width: 100%;
-  height: 100%;
+.section-title {
+  @include typography($section-title...);
+  text-transform: uppercase;
 }
 
-.category-list__item:hover .category-products__text {
-  text-decoration: underline;
-}
+//breadcrumbs
 
-.category-list__item:active .category-products__text {
-  text-decoration: underline;
+.breadcrumbs {
+  display:  block;
+  padding-bottom: 14px;
+
+  &__link {
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-of-type)::after {
+      content: "";
+      display: inline-block;
+      background-image: url(../static/images/breadcrumb-arrow.svg);
+      width: 8px;
+      height: 12px;
+      margin: 0 20px;
+    }
+
+    &_active {
+      @include typography ($crumbs-typo...);
+      font-style: italic;
+      transition: opacity $transition;
+      z-index: 1000;
+
+      &:hover {
+        opacity: .7;
+      }
+
+    }
+ 
+    &_current {
+      @include typography ($crumbs-typo...);
+      font-style: italic;
+      opacity: 0.5;
+    }
+
+  }
+  
 }
 
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
+@import "./social/social";
 @import "./button/button";
+@import "./card/card";
+@import "./pagination/pagination";
+@import "./contact_form/contact-form";
+@import "./checkbox/checkbox";
+@import "./toy_card/toy-card";
+@import "./blog_post/blog-post";

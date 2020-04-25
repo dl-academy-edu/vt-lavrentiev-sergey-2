@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/fonts/oswald.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="blog container">
+        <h1 class="section-title">Blog</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__link"><a href="../../index.html" class="breadcrumbs__link_active">Home</a></li>
+          <li class="breadcrumbs__link breadcrumbs__link_current"> Blog</li>
+        </ul>
+        <div class="blog-post">
+          @@loop('blog_post/index.html', 'blog-posts.json')
+        </div>
+        @@include('pagination/index.html')
+      </section>
+    </main>
+    @@include('footer/index.html')
+    <script src="script.js"></script>
+  </body>
+</html>
