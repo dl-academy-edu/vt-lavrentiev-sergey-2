@@ -1,7 +1,10 @@
-.footer__social-links {
-  flex-grow: 1;
-  display: flex;
-  margin-top: 0;
+.footer {
+
+  &__social-links {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 0;
+  }
 
   &__social-link {
     margin-right: 15px;

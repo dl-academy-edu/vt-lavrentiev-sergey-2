@@ -10,14 +10,6 @@
         <li><a href="#" class="footer__link">2018 Holiday Catalog</a></li>
         <li><a href="#" class="footer__link">Shop By Designer</a></li>
       </ul>
-      <div class="rating">
-        <p class="rating__group">Company Rating</p>
-        <span class="raiting__star">&#9733;</span>
-        <span class="raiting__star">&#9733;</span>
-        <span class="raiting__star">&#9733;</span>
-        <span class="raiting__star">&#9733;</span>
-        <span class="raiting__star">&#9733;</span>
-      </div>       
     </div>
     <div class="footer__section">
       <h2 class="footer__title">Customer Information</h2>
@@ -29,9 +21,6 @@
         <li><a href="#" class="footer__link">Privacy Policy</a></li>
         <li><a href="#" class="footer__link">Search</a></li>
       </ul>
-      <p class="footer__copyright">
-        Copyright © 2018 Dlk • Design Life Kids
-      </p>
     </div>
     <div class="footer__section">
       <h2 class="footer__title">Connect</h2>
@@ -43,9 +32,22 @@
         })
       </form>
       @@include('social/index.html')
-      <p>
-        <a href="#" class="footer__developer">Web Design — Direct Line Development</a>
-      </p>       
+    </div>
+    <div class="footer__company">
+      <div class="footer__section">
+        <div class="footer__rating">
+          <span>Company Rating</span>
+          @@include('rating/index.html')
+        </div>
+      </div>
+      <div class="footer__section">
+        <span class="footer__copyright">
+          Copyright © 2018 Dlk • Design Life Kids
+        </span>
+      </div>
+      <div class="footer__section">
+        <a href="#">Web Design — Direct Line Development</a>
+      </div>
     </div>
   </div>
 </footer>

@@ -32,6 +32,12 @@ img {
   max-width: 100%; 
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1220px;
@@ -112,3 +118,7 @@ img {
 @import "./checkbox/checkbox";
 @import "./toy_card/toy-card";
 @import "./blog_post/blog-post";
+@import "./rating/rating";
+
+
+@import "./mixins"

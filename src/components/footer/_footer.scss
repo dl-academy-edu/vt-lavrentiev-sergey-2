@@ -8,43 +8,32 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__section {
     width: 380px;
-    min-height: 280px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-  
-    &::before {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 380px;
-    background-color: #666666;
-    top: 50px;
-    left: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 380px;
-      background-color: #666666;
-      bottom: 50px;
-      left: 0;
-    }
   }
 
   &__title {
     @include typography ($body-font, 16px, 22px, #AAAAAA);
     font-weight: normal;
-    margin-bottom: 50px;
+    margin-bottom: 28px;
     position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 380px;
+      background-color: #666666;
+      top: 45px;
+      left: 0;
+    }
   }
 
   &__link {
@@ -61,7 +50,7 @@
   &__form {
     display: inline-block;
     max-width: 380px;
-    margin-bottom: 25px;
+    margin: 20px 0 25px;
   }
 
   &__input {
@@ -84,32 +73,48 @@
     }
   }
 
-  &__copyright {
-    margin-top: 50px;
-  }
+  &__company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    position: relative;
+    margin-top: 10px;
 
-  &__developer {
-    color: #A2A2A2;
-    transition: all $transition;
-
-    &:hover {
-      text-decoration: underline;
-      color: $color_white;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 1180px;
+      background-color: #666666;
+      top: -23px;
+      left: 0;
     }
+
+    & a {
+      color: #A2A2A2;
+      transition: all $transition;
+
+      &:hover {
+        text-decoration: underline;
+        color: $color_white;
+      }
+    }  
   }
-}
 
-.rating {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 50px;
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 245px;
 
-  &__group {
-    margin-right: 25px;
-  }
+    & span {
+      margin-right: 25px;
+    }
 
-  &__star {
-    margin-right: 3px;
+    &:hover span {
+      color: #836E5B;
+    }
   }
 }
