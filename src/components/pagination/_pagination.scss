@@ -1,12 +1,13 @@
-@import "variables";
-
 .pagination {
   position: relative;
-  padding-top: 30px;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include breakpoint(mobile){
+    padding: 0 20px;
+  }
 
   &__btn {
     height: 20px;
@@ -39,12 +40,19 @@
     justify-content: space-between;
     width: 100%;
     max-width: 234px;
+    @include breakpoint(mobile){
+      max-width: 188px;
+    }
   }
 
   &__link {
     @include typography($title-font, 16px, 20px, $color_black);
    
     transition: opacity $transition;
+    @include breakpoint(mobile){
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &:hover {
       color: #1E0606;

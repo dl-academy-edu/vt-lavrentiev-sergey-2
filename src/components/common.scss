@@ -1,8 +1,13 @@
+@import "./mixins";
 @import "./variables";
 
 body { 
   margin: 0;
+  
   @include typography ($body-typo...);
+  @include breakpoint(tablet) {
+    @include typography($body-font, 14px, 19px, $color_black);
+  }
 }
 
 a { 
@@ -19,7 +24,11 @@ li {
 }
 
 html { 
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+main {
+  overflow: hidden;
 }
 
 *, 
@@ -43,6 +52,13 @@ fieldset {
   max-width: 1220px;
   padding: 0 20px;
   margin: 0 auto;
+  @include breakpoint(tablet) {
+    max-width: 688px;
+    padding: 0 20px;
+  }
+  @include breakpoint(mobile) {
+    padding: 0;
+  }
 }
 
 .hidden {
@@ -59,11 +75,20 @@ fieldset {
 .block-title {
   @include typography($block-title...);
   text-transform: uppercase;
+  @include breakpoint(tablet) {
+    @include typography($title-font, 36px, 44px, $color_black);
+  }
+  @include breakpoint(mobile) {
+    @include typography($title-font, 24px, 29px, $color_black);
+  }
 }
 
 .section-title {
   @include typography($section-title...);
   text-transform: uppercase;
+  @include breakpoint(mobile){
+    padding: 0 20px;
+  }
 }
 
 //breadcrumbs
@@ -71,6 +96,9 @@ fieldset {
 .breadcrumbs {
   display:  block;
   padding-bottom: 14px;
+  @include breakpoint(mobile){
+    padding: 0 20px;
+  }
 
   &__link {
     display: inline-block;
@@ -119,6 +147,3 @@ fieldset {
 @import "./toy_card/toy-card";
 @import "./blog_post/blog-post";
 @import "./rating/rating";
-
-
-@import "./mixins"

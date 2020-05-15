@@ -1,52 +1,51 @@
 <footer class="footer">
-  <div class="footer__wrapper container">
-    <div class="footer__section">
-      <h2 class="footer__title">Navigation</h2>
-      <ul class="footer__links">
-        <li><a href="#" class="footer__link">About Us</a></li>
-        <li><a href="#" class="footer__link">Blog</a></li>
-        <li><a href="#" class="footer__link">Design Services</a></li>
-        <li><a href="#" class="footer__link">Featured On</a></li>
-        <li><a href="#" class="footer__link">2018 Holiday Catalog</a></li>
-        <li><a href="#" class="footer__link">Shop By Designer</a></li>
-      </ul>
-    </div>
-    <div class="footer__section">
-      <h2 class="footer__title">Customer Information</h2>
-      <ul class="footer__links">
-        <li><a href="#" class="footer__link">Contact Us</a></li>
-        <li><a href="#" class="footer__link">Sale Exclusions</a></li>
-        <li><a href="#" class="footer__link">Shipping & Returns</a></li>
-        <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-        <li><a href="#" class="footer__link">Privacy Policy</a></li>
-        <li><a href="#" class="footer__link">Search</a></li>
-      </ul>
-    </div>
-    <div class="footer__section">
-      <h2 class="footer__title">Connect</h2>
-      <form class="footer__form">
-        <input type="email" class="footer__input" name="email" placeholder="Email"/>@@include('button/index.html', {
-          "text": "Join",
-          "class": "button",
-          "type": "type='submit'"
-        })
-      </form>
-      @@include('social/index.html')
-    </div>
-    <div class="footer__company">
+  <div class="container">
+    <div class="footer__wrapper">
       <div class="footer__section">
-        <div class="footer__rating">
-          <span>Company Rating</span>
-          @@include('rating/index.html')
-        </div>
+        <h2 class="footer__title">Navigation</h2>
+        <hr>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">About Us</a></li>
+          <li><a href="#" class="footer__link">Blog</a></li>
+          <li><a href="#" class="footer__link">Design Services</a></li>
+          <li><a href="#" class="footer__link">Featured On</a></li>
+          <li><a href="#" class="footer__link">2018 Holiday Catalog</a></li>
+          <li><a href="#" class="footer__link">Shop By Designer</a></li>
+        </ul>
       </div>
       <div class="footer__section">
-        <span class="footer__copyright">
-          Copyright © 2018 Dlk • Design Life Kids
-        </span>
+        <h2 class="footer__title">Customer Information</h2>
+        <hr>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Contact Us</a></li>
+          <li><a href="#" class="footer__link">Sale Exclusions</a></li>
+          <li><a href="#" class="footer__link">Shipping & Returns</a></li>
+          <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Search</a></li>
+        </ul>
       </div>
       <div class="footer__section">
-        <a href="#">Web Design — Direct Line Development</a>
+        <h2 class="footer__title">Connect</h2>
+        <hr>
+        <form class="footer__form">
+          <input type="email" class="footer__input" name="email" placeholder="Email"/>@@include('button/index.html', {
+            "text": "Join",
+            "class": "button",
+            "type": "type='submit'"
+          })
+        </form>
+        @@include('social/index.html')
+      </div>
+    </div>
+    <hr class="footer__devider">
+    <div class="footer__info">
+      <div class="footer__rating">
+        <span>Company Rating</span>
+        @@include('rating/index.html')
+      </div>
+      <span class="footer__copyright">Copyright © 2018 Dlk • Design Life Kids</span>
+      <a href="#" class="footer__devlink">Web Design — Direct Line Development</a>
       </div>
     </div>
   </div>
