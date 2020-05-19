@@ -3,20 +3,21 @@
     flex-wrap: nowrap;
     @include breakpoint(mobile){
       padding-left: 20px;
+      padding-right: 20px;
     }
 
     &__article {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
     width: 100%;
     padding: 0 10px;
     margin-bottom: 24px;
-    @include breakpoint(tablet){
-      max-width: 334px;
-    }
-    @include breakpoint(mobile){
-      max-width: 354px;
+
+    & > a {
+      padding-top: 58%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
     &:hover .blog-post__title {

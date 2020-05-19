@@ -1,38 +1,38 @@
 [
   {
     "text": "Apparel Kids",
-    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6",
+    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6",
     "img": "category__bg category__bg_apparel",
     "style": "background-image: url(/static/images/product-1.png)" 
   },
   {
     "text": "Holiday Shop",
-    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6",
+    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6",
     "img": "category__bg category__bg_holiday",
     "style": "background-image: url(/static/images/product-2.png)" 
   },
   {
     "text": "Toys",
-    "grid": "col-xl-3 skip-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6",
+    "grid": "col-xl-3 skip-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6",
     "img": "category__bg category__bg_toys",
     "link": "/pages/toys_for_kids/index.html",
     "style": "background-image: url(/static/images/product-3.png)" 
   },
   {
     "text": "Accessories",
-    "grid": "col-xl-3 add-xl-2 col-lg-4 col-md-4 col-sm-6 col-xs-6",
+    "grid": "col-xl-3 add-xl-2 col-lg-4 col-md-4 col-sm-4 col-xs-6",
     "img": "category__bg category__bg_accessories",
     "style": "background-image: url(/static/images/product-4.png)" 
   },
   {
     "text": "Sale",
-    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6",
+    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6",
     "img": "category__bg category__bg_sale",
     "style": "background-image: url(/static/images/product-5.png)" 
   },
   {
     "text": "Apparel Adults",
-    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6",
+    "grid": "col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6",
     "img": "category__bg category__bg_adults",
     "style": "background-image: url(/static/images/product-6.png)" 
   }

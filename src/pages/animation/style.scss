@@ -1,0 +1,12 @@
+@import '../../components/variables';
+@import '../../components/mixins';
+
+.scene {
+  background-image: url("/static/images/other_elements.svg");
+  background-repeat: repeat-x;
+  background-position: bottom 70px center;
+  padding-bottom: 70px;
+  padding-top: 50px;
+  height: 768px;
+  width: 100%;
+} 

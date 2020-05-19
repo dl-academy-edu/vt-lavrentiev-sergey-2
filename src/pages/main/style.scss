@@ -168,6 +168,11 @@
   @include breakpoint(mobile){
     margin-left: 20px;
   }
+
+  &__card {
+    min-width: 300px;
+    padding: 0 10px;
+  }
   
 
   &__title {
@@ -342,13 +347,15 @@
       flex-wrap: wrap;
     }
 
-    & li {
-      width: auto;
+    & > li {
+      width: 250px;
     }
   }
 
   &__item {
     transition: opacity $transition;
+    width: 100%;
+    padding-right: 25%;
 
     & > img {
       object-fit: cover; 
