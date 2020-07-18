@@ -4,8 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    min-height: 270px;
     cursor: pointer;
   
     &:hover span{
@@ -24,6 +22,8 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-top: 37%;
+    padding-bottom: 37%;
 
   }
   
@@ -33,7 +33,12 @@
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25); 
-    padding: 0 45px;
+    max-width: 190px;
+    @include breakpoint(mobile){
+      font-size: 18px;
+      line-height: 22px;
+      max-width: 124px;
+    }
   }
 
   &__bg {
@@ -43,26 +48,32 @@
 
     &_apparel {
       background-color: #DBE4DB;
+      background-size: contain;
     }
 
     &_holiday {
       background-color: rgba(186, 142, 107, 0.3);
+      background-size: contain;
     }
 
     &_toys {
       background-color: #F8F2DA;
+      background-size: contain;
     }
 
     &_accessories {
       background-color: rgba(9, 3, 79, 0.17);
+      background-size: contain;
     }
 
     &_sale {
       background-color: rgba(207, 68, 111, 0.25);
+      background-size: contain;
     }
 
     &_adults {
       background-color: rgba(125, 151, 218, 0.2);
+      background-size: contain;
     }
 
   }

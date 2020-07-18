@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="../../common.css">
     <link rel="stylesheet" href="./style.css">
@@ -69,7 +70,7 @@
       </section>
       <section class="toy-slider container">
         <h2 class="hidden">Products display</h2>
-        <div class="toy-slider__wrapper">
+        <div class="toy-slider__wrapper row">
           @@loop('toy_card/index.html', 'toys.json')
         </div>
         @@include('pagination/index.html')

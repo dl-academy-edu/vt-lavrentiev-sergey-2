@@ -1,0 +1,57 @@
+.rating {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 97px;
+
+  &__group {
+    position: relative;
+    
+    height: 16px;
+    background-image: url("/static/images/rating.svg");
+  }
+
+  &__star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 16px;
+    font-size: inherit;
+    appearance: none;
+    
+    &:nth-of-type(1) {
+      width: 19px;
+      z-index: 5;
+    }
+    
+    &:nth-of-type(2) {
+      width: 38px;
+      z-index: 4;
+    }
+    
+    &:nth-of-type(3) {
+      width: 59px;
+      z-index: 3;
+    }
+    
+    &:nth-of-type(4) {
+      width: 78px;
+      z-index: 2;
+    }
+    
+    &:nth-of-type(5) {
+      width: 97px;
+      z-index: 1;
+    }
+
+    &:hover, &:focus {
+      background-image: url("/static/images/rating_hover.svg");
+    }
+
+    &:active {
+      background-image: url("/static/images/rating_active.svg");
+    }
+
+  }
+}

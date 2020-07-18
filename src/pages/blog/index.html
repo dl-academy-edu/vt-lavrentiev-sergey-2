@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
@@ -19,7 +20,7 @@
           <li class="breadcrumbs__link"><a href="../../index.html" class="breadcrumbs__link_active">Home</a></li>
           <li class="breadcrumbs__link breadcrumbs__link_current"> Blog</li>
         </ul>
-        <div class="blog-post">
+        <div class="blog-post row">
           @@loop('blog_post/index.html', 'blog-posts.json')
         </div>
         @@include('pagination/index.html')

@@ -2,9 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="../../common.css">
-  <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="/static/fonts/oswald.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
     <title>Grid</title>
@@ -16,17 +17,19 @@
         <div class="container">
           <h1 class="section__title">Grid</h1>
           <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="../../index.html" class="breadcrumbs__link">Home</a>
+            <li class="breadcrumbs__link">
+              <a href="../../index.html" class="breadcrumbs__link_active">Home</a>
             </li>
-            <li class="breadcrumb breadcrumbs__item">Grid</li>
+            <li class="breadcrumbs__link breadcrumbs__link_current">Grid</li>
           </ul>
         </div>
         <div class="grid-board">
           <div class="grid-card grid-board__item1">
-            <span class="grid-card__phone">Iphone 6s</span>
-            <h2 class="grid-card__title" >3D Touch. 12MP photos. 4K video. One powerful phone</h2>
-            <p class="grid-card__description">Learn more or visit an Apple Store today</p>
+            <div class="grid-card__content">
+              <span class="grid-card__phone">Iphone 6s</span>
+              <h2 class="grid-card__title" >3D Touch. 12MP photos. 4K video. One powerful phone</h2>
+              <p class="grid-card__description">Learn more or visit an Apple Store today</p>
+            </div>
           </div>
           <div class="grid-card grid-board__item2">
             <span>Learn More</span>
@@ -35,7 +38,7 @@
           </div>
           <div class="grid-card grid-board__item3">
             <h2>Our Brand New Keyboard</h2>
-            <a href="#">Learn</a>
+            <a href="#">Learn></a>
           </div>
           <div class="grid-card grid-board__item4">
             <div class="content-wrapper">
@@ -48,23 +51,26 @@
             </div>
           </div>
           <div class="grid-card grid-board__item5">
+            <div></div>
             <h2>iCloud</h2>
             <p>With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
             @@include('button/link-btn.html', {
               "type": "button",
-              "class": "grid-button",
+              "class": "grid-card__button",
               "text": "Learn More"
             })
           </div>
           <div class="grid-card grid-board__item6">
-            <span class="label">Best Choice</span>
-            <h2 class="centered">Much MuchBetter Experience</h2>
+            <span>Best Choice</span>
+            <h2>Much MuchBetter Experience</h2lass=>
           </div>
           <div class="grid-card grid-board__item7">
             <h2>Games ourpasion</h2>
-            <a href="#">LEARN ›</a>
+            <a href="#">Learn›</a>
           </div>
-          <div class="grid-card grid-board__item8">Follow Me</div>
+          <div class="grid-card grid-board__item8">
+            <span>Follow Me ></span>
+          </div>
           <div class="grid-card grid-board__item9">
             <h2>More than just a display,  it’s a vision</h2>
           </div>

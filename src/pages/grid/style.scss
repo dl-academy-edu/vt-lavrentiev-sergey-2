@@ -1,24 +1,99 @@
 @import '../../components/variables';
+@import '../../components/mixins';
 
 .grid-board {
   display: grid;
-  height: 1505px;
+  width: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);;
+  grid-template-rows: repeat(4, 1fr);
+  @include breakpoint(tablet){
+    grid-template-rows: repeat(7, auto);
+  } 
+  @include breakpoint(mobile){
+    display: flex;
+    flex-direction: column;
+  }
 
   &__item1 {
     background-image: url("/static/images/grid-img01.png");
     background-repeat: no-repeat;
     background-position: bottom 0 right 80px;
     grid-column: 1/3;
-    padding: 135px 400px 136px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(tablet){
+      grid-column: 1/5;
+      grid-row: 2/3;
+      background-position: bottom 0 right 110px;
+    } 
+    @include breakpoint(mobile){
+      order: 2;
+      background-position: bottom 0 center;
+      padding-top: 30px;
+      padding-bottom: 345px;
+      align-items: center;
+    }
   }
 
   &__item2 {
     grid-column: 3/5;
     background-color: #F7F8FA;
-    padding: 97px 125px 98px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(tablet){
+      grid-column: 1/5;
+      grid-row: 1/2;
+      height: 278px;
+    } 
+    @include breakpoint(mobile){
+      padding-left: 20px;
+      order: 1;
+      align-items: flex-start;
+    }
+    span {
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: #BCBCBE;
+    }
+
+    h2 {
+      max-width: 450px;
+
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 58px;
+
+      color: #2C3036;
+      @include breakpoint(tablet){
+        font-size: 35px;
+        line-height: 42px;
+        max-width: 500px;
+        margin-bottom: 40px;
+      }
+      @include breakpoint(mobile){
+        margin: 20px 0 40px;
+        text-align: left;
+      }
+    }
+
+    a {
+      font-family: Lato;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+
+      text-decoration-line: underline;
+
+      color: #2198F4;
+    }
   }
 
   &__item3 {
@@ -27,9 +102,46 @@
     background-image: url("/static/images/grid-img02.png");
     background-repeat: no-repeat;
     background-position: center top 84px;
-    padding: 258px 88px 84px 92px;
+    
     text-align: center;
     color: $color_white;
+    @include breakpoint(tablet){
+      grid-row: 3/4;
+      grid-column: 1/3;
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    @include breakpoint(mobile){
+      order: 3;
+    }
+
+    h2 {
+      max-width: 170px;
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    a {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+
+      color: #FFC80A;
+
+      margin-bottom: 84px;
+    }
+    
   }
 
   &__item4 {
@@ -41,10 +153,75 @@
 
     display: flex;
     align-items: center;
+    @include breakpoint(tablet){
+      grid-column: 1/5;
+      grid-row: 4/5;
+      padding-top: 98px;
+    } 
+    @include breakpoint(mobile){
+      order: 4;
+      flex-direction: column;
+      padding: 30px 0;
+      align-items: flex-start;
+      background-position: left 0 center;
+    }
     
     .content-wrapper {
       margin-right: 110px;
+      @include breakpoint(mobile){
+        margin-right: 0;
+        margin-left: 20px;
+        margin-bottom: 244px;
+      }
     }
+
+    span {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: #BCBCBE;
+    }
+
+    h2 {
+      max-width: 170px;
+
+      font-family: Lato;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+
+      color: #2C3036;
+    }
+
+    p {
+      max-width: 230px;
+      font-family: Lato;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #BCBCBE;
+      @include breakpoint(mobile){
+        margin-left: 20px;
+      }
+    }
+
+    a {
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+
+      color: #2198F4;
+      @include breakpoint(mobile){
+        margin-left: 20px;
+      }
+    }
+   
   }
 
   &__item5 {
@@ -52,31 +229,126 @@
     grid-column: 4;
 
     background-color: #8F75BC;
-    background-image: url("/static/images/grid-img04.png");
-    background-repeat: no-repeat;
-    background-position: center top 162px;
-    text-align: center;
-    padding: 462px 60px 162px;
+    
+    padding: 0 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(tablet){
+      grid-column: 3/5;
+      grid-row: 5/7;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      height: 700px;
+    } 
+    @include breakpoint(mobile){
+      order: 8;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      height: 596px;
+    }
+    
+    div {
+      max-width: 300px;
+      width: 100%;
+      max-height: 300px;
+      height: 100%;
+      background-color: #8066B0;
+      border-radius: 50%;
+      background-image: url("/static/images/grid-img04.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 38px;
+
+      text-align: center;
+
+      color: #FFFFFF;
+      @include breakpoint(mobile){
+        margin: 10px 0;
+      }
+    }
+
+    p {
+      font-family: Lato;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      padding: 0 40px;
+      margin-bottom: 30px;
+
+      color: #FFFFFF;
+      @include breakpoint(tablet){
+        padding: 0 20px;
+      }
+      color: #FFFFFF;
+      @include breakpoint(mobile){
+        padding: 0 40px;
+      }
+    }
   }
 
   &__item6 {
     grid-column: 1/3;
     background-image: url("/static/images/grid-img05.png");
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: center bottom 0;
     background-color: #93B7B7;
+    @include breakpoint(tablet){
+      grid-column: 1/3;
+      grid-row: 5/6;
+    } 
+    @include breakpoint(mobile){
+      order: 6;
+      padding-bottom: 161px;
+    }
 
-    .label {
+    span {
       display: inline-block;
       margin: 18px 20px;
-    }
+      padding: 3px 5px;
+      background: #FA684F;
+      border-radius: 3px;
 
-    .centered {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 8px;
+      line-height: 10px;
+
       text-align: center;
-      display: inline-block;
-      margin: 20px 250px 306px;
+
+      color: #FFFFFF;
+      @include breakpoint(mobile){
+        margin-top: 15px;
+      }
     }
 
+    h2 {
+      display: block;
+      margin: 20px auto;
+      max-width: 220px;
+      padding: 0 10px;
+
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+
+      color: #FFFFFF;
+    }
   }
 
   &__item7 {
@@ -86,10 +358,69 @@
     background-position: center top 96px;
     text-align: center;
     padding: 278px 10px 20px;
+    @include breakpoint(tablet){
+      grid-column: 3/5;
+      grid-row: 3/4;
+    } 
+    @include breakpoint(mobile){
+      order: 3;
+    }
+
+    h2 {
+      font-family: Lato;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+
+      text-align: center;
+
+      color: #2C3036;
+    }
+
+    a {
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+
+      color: #2198F4;
+    }
   }
 
   &__item8 {
     grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(tablet){
+      grid-column: 1/3;
+      grid-row: 6/7;
+    } 
+    @include breakpoint(mobile){
+      order: 7;
+      padding: 50px 0;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      max-width: 120px;
+      padding-top: 74px;
+      background-image: url("/static/images/instagram-icon.svg");
+      background-repeat: no-repeat;
+      background-position: top 0 center;
+
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+
+      text-align: center;
+      cursor: pointer;
+
+      color: #2C3036;
+    }
   }
 
   &__item9 {
@@ -97,8 +428,80 @@
     background-color: #2C2C2C;
     background-image: url("/static/images/grid-img07.png");
     background-repeat: no-repeat;
-    background-position: center left 200px;
+    background-position: centesr left 200px;
     padding: 60px 310px 5px 550px;
+    @include breakpoint(tablet){
+      grid-column: 1/5;
+      grid-row: 7/8;
+      background-position: center left 59px;
+      padding: 50px 0 50px 410px;
+    }
+    @include breakpoint(mobile){
+      order: 9;
+      padding: 237px 0 0;
+      background-position: top 0 right 100px;
+    }
+
+    h2 {
+      font-family: Lato;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+
+      color: #FFFFFF;
+
+      max-width: 189px;
+      width: 100%;
+      @include breakpoint(mobile){
+        text-align: center;
+        margin: 0 auto 30px;
+      }
+    }
   }
 }
 
+.grid-card {
+
+  &__content {
+    margin-left: 80px;
+    @include breakpoint(tablet){
+      margin-left: 110px;
+    }
+    @include breakpoint(mobile){
+      margin-left: 0;
+    }
+  }
+
+  &__phone {
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    color: #BCBCBE;
+  }
+
+  &__title {
+    max-width: 220px;
+
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #2C3036;
+    @include breakpoint(mobile){
+      max-width: 330px;
+    }
+  }
+
+  &__description {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #BCBCBE;
+  }
+}
